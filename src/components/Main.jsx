@@ -5,7 +5,7 @@ export const Main = () => {
                 <h1 className="main-title">Full-Stack <br/> Web Developer</h1>
             </section>
             <section className="main-tecnologies">
-                <img src="/public/img/node.png" alt="node.png" title="Node.JS"/>
+                <img src="https://i.imgur.com/NfddCaX.png" alt="node.png" title="Node.JS"/>
                 <img src="/public/img/express.png" alt="express.png" title="Express.JS"/>
                 <img src="/public/img/react.png" alt="react.png" title="React.JS"/>
                 <img src="/public/img/mysql.png" alt="mysql.png" title="MySQL"/>
