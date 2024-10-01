@@ -1,3 +1,5 @@
+import { ProjectBox } from './ProjectBox.jsx';
+
 export const Main = () => {
     return (
         <main>
@@ -15,6 +17,9 @@ export const Main = () => {
                 <img src="/public/img/html.png" alt="html.png" title="HTML5"/>
                 <img src="/public/img/css.png" alt="css.png" title="CSS3"/>
                 <img src="/public/img/javascript.png" alt="javascript.png" title="JavaScript"/>
+            </section>
+            <section className="main-projects">
+                <ProjectBox title="Proyecto 1" subtitle="Subtítulo 1" description="Descripción 1" img="https://i.imgur.com/1zv3Z9I.png" link="https://www.google.com"/>
             </section>
         </main>
     )
