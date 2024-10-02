@@ -1,6 +1,8 @@
 import { ProjectBox } from './ProjectBox.jsx';
+import { DownloadButton } from './DownloadButton.jsx';
 import { useProjects } from '../hooks/useProjects.js';
 import { useTechnologies } from '../hooks/useTechnologies.js';
+
 
 export const Main = () => {
     const { projects } = useProjects();
@@ -23,21 +25,21 @@ export const Main = () => {
 
                     <p>
                         Soy un desarrollador web full-stack con una fuerte habilidad en la creación de endpoints para APIs usando Node.JS. Actualmente, curso una tecnicatura en desarrollo de software, lo que refuerza mis conocimientos prácticos y teóricos.
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
                         He completado un curso de desarrollo web Full Stack, trabajando con el stack MERN, pero utilizando MySQL en lugar de MongoDB.
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
                         Actualmente, estoy en el equipo de desarrollo de un sistema médico online para gestionar historias clínicas e informes. Este proyecto personal no está disponible al público por razones de privacidad.
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
 
-                        <br/>
+                        <br />
                         Tengo experiencia como recepcionista en un consultorio, lo que me ha dotado de habilidades organizativas y de atención al cliente.
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
                         Estoy en busca de mi primera oportunidad laboral formal en IT como desarrollador. Me interesa resolver problemas y crear soluciones que mejoren la experiencia del usuario y la eficiencia operativa.
-                        <br/>
+                        <br />
                     </p>
                     <img src="/profile.jpeg" alt="profile.jpeg" />
                 </div>
@@ -52,6 +54,10 @@ export const Main = () => {
                     }
                 </div>
             </section>
+            <div className="download-container">
+                <span>Descargar CV</span>
+                <DownloadButton />
+            </div>
         </main>
     )
 }
