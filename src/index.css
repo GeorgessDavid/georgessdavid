@@ -10,6 +10,10 @@
 }
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -17,52 +21,197 @@ header {
   background-color: #212529;
   color: #F83D3D;
   border-bottom: #F83D3D 2px solid;
+  transition: all 300ms ease-in-out;
 }
 
-header > nav > ul{
+header.scrolled, header.scrolled>nav>ul>li>a, header.scrolled>nav> ul{
+  background-color: #F83D3D;
+  color: #212529;
+  transition: all 300ms ease-in-out;
+}
+
+header.scrolled>nav>ul>li>a:hover {
+  color: white;
+}
+
+header>nav>ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header > nav > ul > li {
+header>nav>ul>li {
   list-style: none;
   margin: 0 1rem;
 }
 
-header > nav > ul > li > a {
+header>nav>ul>li>a {
   text-decoration: none;
   color: #F83D3D;
   text-transform: uppercase;
   transition: all 300ms;
 }
 
-header > nav > ul > li > a:hover{
-  color:aliceblue
+header>nav>ul>li>a:hover {
+  color: aliceblue
 }
 
-.main-section{
+.main-section {
   display: flex;
   justify-content: flex-start;
   margin: 5rem 10rem;
 }
 
-.main-title{
+.main-title {
   font-size: 6rem;
   color: white;
   text-align: start;
   width: 50vw;
 }
 
-.main-tecnologies{
+.main-tecnologies {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.main-tecnologies > img{
+.main-tecnologies>img {
   width: 7rem;
   height: 7rem;
   margin: 0 1rem;
   object-fit: cover;
+}
+
+.main-aboutme {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-aboutme>h1 {
+  color: #F83D3D;
+  font-size: 2rem;
+  margin: 1rem 2rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.main-aboutme > div {
+  border-top: #F83D3D 2px solid;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-aboutme > div > img{
+  width: 20%;
+  margin: 1rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.main-aboutme >div > p{
+  color: white;
+  font-size: 1rem;
+  margin: 1rem 2rem;
+}
+
+.main-projects {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-projects>h1 {
+  color: #F83D3D;
+  font-size: 2rem;
+  margin: 1rem 2rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.main-projects>div {
+  border-top: #F83D3D 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-box {
+  max-width: 20%;
+  background-color: #181818;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.project-box img {
+  max-width: 100%;
+  margin: 0 0 1rem 0;
+  box-shadow: 0 2px 10px #212529;
+}
+
+.project-box h2,
+.project-box h3,
+.project-box p,
+.project-box a {
+  background-color: #181818;
+  color: white;
+}
+
+.project-box h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.project-box h3 {
+  font-size: 0.75rem;
+  margin: -1rem 0 1rem;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.project-box p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.project-box a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  position: relative;
+  top: 80%;
+  left: 80%;
+  transition: all 300ms ease-in-out;
+}
+
+.project-box a:hover {
+  text-decoration: underline;
+}
+
+.pb-technologies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  border-radius: 15px;
+  ;
+}
+
+.pb-technologies img {
+  width: 7.5%;
+  margin: 0.5rem;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1400px) {
+  * {
+    font-size: 13px !important;
+  }
 }
