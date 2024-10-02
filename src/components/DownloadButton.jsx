@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 export const DownloadButton = () => {
     const handleDownload = () => {
@@ -12,8 +12,8 @@ export const DownloadButton = () => {
     };
 
     return (
-        <button onClick={handleDownload} className="download-button" title='Descargar CV'>
+        <div onClick={handleDownload} className="download-button" title='Descargar CV'>
             <FontAwesomeIcon icon={faDownload} size='xl'/>
-        </button>
+        </div>
     );
 };

@@ -54,9 +54,11 @@ export const Main = () => {
                     }
                 </div>
             </section>
-            <div className="download-container">
-                <span>Descargar CV</span>
-                <DownloadButton />
+            <div className='download-wrapper'>
+                <div className="download-wrapper-button">
+                    <DownloadButton />
+                    <span>Descargar CV</span>
+                </div>
             </div>
         </main>
     )
