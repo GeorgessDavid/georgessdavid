@@ -18,7 +18,7 @@ main {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -79,13 +79,13 @@ footer {
   gap: 1rem;
 }
 
-footer a{
+footer a {
   color: #F83D3D;
   text-decoration: none;
   transition: all 300ms ease-in-out;
 }
 
-footer a:hover{
+footer a:hover {
   color: white;
 }
 
@@ -102,7 +102,7 @@ footer a:hover{
   width: 50vw;
 }
 
-.main-tecnologies > div {
+.main-tecnologies>div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,7 +117,7 @@ footer a:hover{
   object-fit: cover;
 }
 
-.main-tecnologies>h1{
+.main-tecnologies>h1 {
   color: #F83D3D;
   font-size: 2rem;
   margin: 1rem 1.5rem;
@@ -315,6 +315,45 @@ footer a:hover{
 .download-wrapper:hover svg {
   color: #F83D3D;
   transition: all 300ms;
+}
+
+
+main>section {
+  padding-top: 3rem;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden; /* Para que no se vean los elementos que exceden el contenedor */
+}
+
+.carousel {
+  display: flex;
+  overflow-x: hidden; /* Permite hacer scroll horizontal */
+  scroll-behavior: smooth; /* Transiciones suaves al hacer scroll */
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Empieza desde el inicio */
+  }
+  100% {
+    transform: translateX(-100%); /* Desplaza completamente a la izquierda */
+  }
+}
+
+.carousel-item {
+  min-width: 5rem; /* Ajusta este valor según el tamaño de los elementos */
+  margin: 0 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel-item img {
+  max-width: 100%; /* Para que las imágenes respeten el tamaño del contenedor */
+  height: auto;
+  object-fit: cover;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1400px) {

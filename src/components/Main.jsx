@@ -23,13 +23,21 @@ export const Main = () => {
                 <h1 className="main-title">Full-Stack <br /> Web Developer</h1>
             </section>
             <section className="main-tecnologies" id="tecnologies">
-                <h1>Tecnologías</h1>
-                <div>                    
-                    {
-                        technologies.map((technology, index) => {
-                            return <img src={technology.img} alt={technology.title} title={technology.title} key={index} />
-                        })
-                    }
+                <h1 id="tecnologies">Tecnologías</h1>
+                <div className='carousel-container'>
+                    <div className='carousel'>
+                        {
+                            technologies.map((technology, index) => {
+                                return (
+                                    <div key={index} className='carousel-item'>
+                                        <img srcSet={technology.img} alt={technology.title} title={technology.title} />
+                                    </div>)
+                            })
+                        }
+                        <div className='carousel-item'>
+                            <img src="/tailwind.png" alt="tailwind" title="Tailwind.css" />
+                        </div>
+                    </div>
                 </div>
             </section>
             <section className='main-aboutme' id="aboutMe">
@@ -62,7 +70,14 @@ export const Main = () => {
                 <div>
                     {
                         projects.map((project, index) => {
-                            return <ProjectBox key={index} title={project.title} technologies={project.technologies} subtitle={project.subtitle} description={project.description} img={project.img} link={project.link} />
+                            return <ProjectBox
+                                key={index}
+                                title={project.title}
+                                technologies={project.technologies}
+                                subtitle={project.subtitle}
+                                description={project.description}
+                                img={project.img}
+                                link={project.link} />
                         })
                     }
                 </div>
