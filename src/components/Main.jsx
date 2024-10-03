@@ -7,17 +7,30 @@ import { useTechnologies } from '../hooks/useTechnologies.js';
 export const Main = () => {
     const { projects } = useProjects();
     const { technologies } = useTechnologies();
+
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = 'https://drive.google.com/uc?export=download&id=15g3-jhchC4Ny1OCjtr2NcuqkHf0u4A3l';
+        link.download = 'CV_Georges_Ammiel_David.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <main>
             <section className="main-section">
                 <h1 className="main-title">Full-Stack <br /> Web Developer</h1>
             </section>
             <section className="main-tecnologies" id="tecnologies">
-                {
-                    technologies.map((technology, index) => {
-                        return <img src={technology.img} alt={technology.title} title={technology.title} key={index} />
-                    })
-                }
+                <h1>Tecnologías</h1>
+                <div>                    
+                    {
+                        technologies.map((technology, index) => {
+                            return <img src={technology.img} alt={technology.title} title={technology.title} key={index} />
+                        })
+                    }
+                </div>
             </section>
             <section className='main-aboutme' id="aboutMe">
                 <h1>Sobre Mí</h1>
@@ -54,7 +67,7 @@ export const Main = () => {
                     }
                 </div>
             </section>
-            <div className='download-wrapper'>
+            <div className='download-wrapper' onClick={handleDownload}>
                 <div className="download-wrapper-button">
                     <DownloadButton />
                     <span>Descargar CV</span>
