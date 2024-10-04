@@ -2,11 +2,11 @@ import { ProjectBox } from './ProjectBox.jsx';
 import { DownloadButton } from './DownloadButton.jsx';
 import { useProjects } from '../hooks/useProjects.js';
 import { useTechnologies } from '../hooks/useTechnologies.js';
-
+import { Carousel } from './Carousel.jsx';
 
 export const Main = () => {
     const { projects } = useProjects();
-    const { technologies } = useTechnologies();
+    const { technologies, loading } = useTechnologies();
 
     const handleDownload = () => {
         const link = document.createElement('a');
@@ -17,6 +17,7 @@ export const Main = () => {
         document.body.removeChild(link);
     };
 
+
     return (
         <main>
             <section className="main-section">
@@ -24,21 +25,7 @@ export const Main = () => {
             </section>
             <section className="main-tecnologies" id="tecnologies">
                 <h1 id="tecnologies">Tecnologías</h1>
-                <div className='carousel-container'>
-                    <div className='carousel'>
-                        {
-                            technologies.map((technology, index) => {
-                                return (
-                                    <div key={index} className='carousel-item'>
-                                        <img srcSet={technology.img} alt={technology.title} title={technology.title} />
-                                    </div>)
-                            })
-                        }
-                        <div className='carousel-item'>
-                            <img src="/tailwind.png" alt="tailwind" title="Tailwind.css" />
-                        </div>
-                    </div>
-                </div>
+                <Carousel technologies={technologies} loading={loading}/>
             </section>
             <section className='main-aboutme' id="aboutMe">
                 <h1>Sobre Mí</h1>
