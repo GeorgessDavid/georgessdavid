@@ -5,7 +5,7 @@ export const useTechnologies = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:3008/technologies')
+        fetch('https://api-georgesdavid.vercel.app/technologies')
             .then(response => response.json())
             .then(data => {
                 setTechnologies(data);

@@ -5,7 +5,7 @@ export const useProjects = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:3008/projects')
+        fetch('https://api-georgesdavid.vercel.app/projects')
             .then(response => response.json())
             .then(data => {
                 setProjects(data);

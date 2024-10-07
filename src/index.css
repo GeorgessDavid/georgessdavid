@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-* {
+html {
   font-size: 16px;
+}
+
+* {
   font-family: 'Ubuntu', sans-serif;
   margin: 0;
   padding: 0;
@@ -112,7 +115,7 @@ footer a:hover {
   height: 7rem;
   margin: 0 1rem;
   object-fit: cover;
-} 
+}
 
 .main-tecnologies>h1 {
   color: #F83D3D;
@@ -185,6 +188,8 @@ footer a:hover {
 .project-box {
   max-width: 20%;
   background-color: #181818;
+  position: relative;
+  height: 35rem;
   padding: 1rem;
   margin: 1rem;
 }
@@ -226,8 +231,8 @@ footer a:hover {
   font-size: 1rem;
   font-weight: bold;
   margin: 1rem 0;
-  position: relative;
-  top: 80%;
+  position: absolute;
+  top: 90%;
   left: 80%;
   transition: all 300ms ease-in-out;
 }
@@ -325,15 +330,82 @@ main>section {
 }
 
 .carousel-container img {
-  width: 7rem; /* Ajusta el tamaño de los logos */
+  width: 7rem;
   object-fit: cover;
 }
 
 
-@media only screen and (min-width: 700px) and (max-width: 1400px) {
-  * {
-    font-size: 13px !important;
+@media only screen and (min-width: 933px) and (max-width: 1400px) {
+  html {
+    font-size: 14px !important;
+  }
+
+  .main-title {
+    font-size: 4em;
+  }
+
+  .project-box {
+    min-height: 30rem;
+    max-width: 30%;
+  }
+
+  .project-box a{
+    left: 75%;
   }
 }
 
-/* SLICK CSS - DOESNT WORKS */
+@media only screen and (min-width: 432px) and (max-width: 932px) {
+  html {
+    font-size: 13px !important;
+  }
+
+  .project-box {
+    max-width: 40%;
+  }
+
+}
+
+@media only screen and (min-width: 123px) and (max-width: 432px) {
+
+  html {
+    font-size: 12px !important;
+  }
+
+  .main-aboutme>div{
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .main-aboutme>div>img {
+    width: 50%;
+  }
+
+  .main-aboutme>div>p {
+    width: 90%;
+    font-size: 1.25rem;
+  }
+
+  .main-title{
+    font-size: 5em;
+    width: 100%;
+    margin-left: -1em;
+  }
+
+  .download-wrapper .download-wrapper-button{
+    top: 90%;
+    left: 5%;
+  }
+
+  .download-wrapper .download-wrapper-button:hover{
+    left: 45%;
+  }
+
+  .main-projects>div {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .project-box {
+    max-width: 80%;
+  }
+}

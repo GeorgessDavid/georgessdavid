@@ -7,14 +7,14 @@ export const ProjectBox = ({ title, technologies, subtitle, description, img, li
             <div className="pb-technologies">
                 {
                     technologies.map((technology, index) => {
-                        return <img src={technology.img} alt={technology.title} title={technology.title} key={index} />
+                        return <img src={technology.img} alt={technology.name} title={technology.name} key={index} />
                     })
                 }
             </div>
             <h2>{title}</h2>
             <h3>{subtitle}</h3>
             <p>{description}</p>
-            <a href={link} target="_blank" rel="noreferrer">Ir al Sitio</a>
+            <a href={link} target="_blank" rel="noreferrer" title={title}>Ir al Sitio</a>
         </article>
     )
 }
