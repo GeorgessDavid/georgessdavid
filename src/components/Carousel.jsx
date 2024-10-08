@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import propTypes from 'prop-types';
+import { Skeleton } from '@mui/material'
 import './styles/slick.css';
 import './styles/slick-theme.css';
 
 
-export const Carousel = ({ technologies }) => {
+export const Carousel = ({ technologies, loading }) => {
 
     const [slidesToShow, setSlidesToShow] = useState(10); // Valor por defecto
 
@@ -34,7 +35,6 @@ export const Carousel = ({ technologies }) => {
         // Eliminar listener al desmontar el componente
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-
     const settings = {
         infinite: true,
         slidesToShow,
@@ -44,20 +44,32 @@ export const Carousel = ({ technologies }) => {
         arrows: false
     }
 
-    
+    const array = new Array(slidesToShow).fill('s');
+
     return (
         <div className='carousel-container'>
-            <Slider {...settings}>
-                {
-                    technologies.map((technology, index) => {
-                        return (
-                            <div key={index}>
-                                <img srcSet={technology.img} alt={technology.name} title={technology.name} />
-                            </div>)
-                    })
+            {
+                !loading ?
+                    <Slider {...settings}>
+                        {
+                            technologies.map((technology, index) => {
+                                return (
+                                    <div key={index}>
+                                        <img srcSet={technology.img} alt={technology.name} title={technology.name} />
+                                    </div>)
+                            })
 
-                }
-            </Slider>
+                        }
+                    </Slider>
+                    :
+                    <div className='d-flex justify-between'>
+                        {
+                            array.map((_, index) => {
+                                return <Skeleton key={index} variant='circular' width={150} height={150} animation="wave" />
+                            })
+                        }
+                    </div>
+            }
         </div>
     )
 }
