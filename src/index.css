@@ -150,7 +150,7 @@ footer a:hover {
 
 .main-aboutme>div>img {
   width: 20%;
-  margin: 1rem;
+  margin: 3rem 1rem;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -358,6 +358,10 @@ main>section {
 
   .project-box a{
     left: 75%;
+  }
+
+  .download-wrapper .download-wrapper-button:hover{
+    left: 80%;
   }
 }
 
