@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html {
+  font-size: 16px;
+}
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212529;
+}
+
+main {
+  flex: 1;
+  background-color: #212529;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #212529;
+  color: #F83D3D;
+  border-bottom: #F83D3D 2px solid;
+  transition: all 300ms ease-in-out;
+}
+
+header.scrolled {
+  background-color: #F83D3D;
+  color: #212529;
+  transition: all 300ms ease-in-out;
+}
+
+header.scrolled>nav>ul>li>a {
+  color: #212529;
+}
+
+header.scrolled>nav>ul>li>a:hover {
+  color: white;
+}
+
+header>nav>ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header>nav>ul>li {
+  list-style: none;
+  margin: 0 1rem;
+}
+
+header>nav>ul>li>a {
+  text-decoration: none;
+  color: #F83D3D;
+  text-transform: uppercase;
+  transition: all 300ms;
+}
+
+header>nav>ul>li>a:hover {
+  color: aliceblue
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212529;
+  color: #F83D3D;
+  padding: 1rem 2rem;
+  border-top: #F83D3D 2px solid;
+  gap: 1rem;
+}
+
+footer a {
+  color: #F83D3D;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.main-section {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5rem 10rem;
+}
+
+.main-title {
+  font-size: 6rem;
+  color: white;
+  text-align: start;
+  width: 50vw;
+}
+
+.main-tecnologies>div {
+  padding: 2rem;
+  border-top: #F83D3D 2px solid;
+}
+
+.main-tecnologies>div>img {
+  width: 7rem;
+  height: 7rem;
+  margin: 0 1rem;
+  object-fit: cover;
+}
+
+.main-tecnologies>h1 {
+  color: #F83D3D;
+  font-size: 2rem;
+  margin: 1rem 1.5rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.main-aboutme {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-aboutme>h1 {
+  color: #F83D3D;
+  font-size: 2rem;
+  margin: 1rem 2rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.main-aboutme>div {
+  border-top: #F83D3D 2px solid;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-aboutme>div>img {
+  width: 20%;
+  margin: 3rem 1rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.main-aboutme>div>p {
+  color: white;
+  font-size: 1rem;
+  margin: 1rem 2rem;
+  width: 35vw;
+}
+
+.main-projects {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-projects>h1 {
+  color: #F83D3D;
+  font-size: 2rem;
+  margin: 1rem 2rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.main-projects>div {
+  border-top: #F83D3D 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-box {
+  max-width: 20%;
+  background-color: #181818;
+  position: relative;
+  height: 35rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.project-box img {
+  max-width: 100%;
+  margin: 0 0 1rem 0;
+  box-shadow: 0 2px 10px #212529;
+}
+
+.project-box h2,
+.project-box h3,
+.project-box p,
+.project-box a {
+  background-color: #181818;
+  color: white;
+}
+
+.project-box h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.project-box h3 {
+  font-size: 0.75rem;
+  margin: -1rem 0 1rem;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.project-box p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.project-box a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  position: absolute;
+  top: 90%;
+  left: 80%;
+  transition: all 300ms ease-in-out;
+}
+
+.project-box a:hover {
+  text-decoration: underline;
+}
+
+.pb-technologies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  border-radius: 15px;
+  ;
+}
+
+.pb-technologies img {
+  width: 7.5%;
+  margin: 0.5rem;
+  object-fit: cover;
+}
+
+.download-wrapper .download-wrapper-button {
+  top: 80%;
+  left: 90%;
+  position: fixed;
+  z-index: 10;
+  height: 60px;
+  width: 60px;
+  float: left;
+  overflow: hidden;
+  margin: 0 5px;
+  background-color: #F83d3d;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(103, 103, 103, 0.7);
+  color: white;
+  transition: all 0.3s ease-out;
+}
+
+.download-wrapper .download-wrapper-button:hover {
+  background-color: white;
+  color: #F83d3d;
+  transition: all 0.3s ease-out;
+  width: 200px;
+  border-radius: 15px;
+  left: 85%;
+}
+
+.download-wrapper .download-wrapper-button .download-button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+}
+
+.download-wrapper .download-wrapper-button span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 50px;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+
+.download-wrapper .download-wrapper-button:hover span {
+  opacity: 1;
+  position: relative;
+  right: 5%;
+}
+
+.download-wrapper:hover {
+  background-color: #FFFFFF;
+  color: #F83D3D;
+  transition: all 300ms ease-in-out;
+}
+
+.download-wrapper:hover svg {
+  color: #F83D3D;
+  transition: all 300ms;
+}
+
+
+main>section {
+  padding-top: 3rem;
+}
+
+.carousel-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-container img {
+  width: 7rem;
+  object-fit: cover;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 933px) and (max-width: 1400px) {
+  html {
+    font-size: 14px !important;
+  }
+
+  .main-title {
+    font-size: 4em;
+  }
+
+  .project-box {
+    min-height: 30rem;
+    max-width: 30%;
+  }
+
+  .project-box a{
+    left: 75%;
+  }
+
+  .download-wrapper .download-wrapper-button:hover{
+    left: 80%;
+  }
+}
+
+@media only screen and (min-width: 432px) and (max-width: 932px) {
+  html {
+    font-size: 13px !important;
+  }
+
+  .project-box {
+    max-width: 40%;
+  }
+
+}
+
+@media only screen and (min-width: 123px) and (max-width: 432px) {
+
+  html {
+    font-size: 12px !important;
+  }
+
+  .main-aboutme>div{
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .main-aboutme>div>img {
+    width: 50%;
+  }
+
+  .main-aboutme>div>p {
+    width: 90%;
+    font-size: 1.25rem;
+  }
+
+  .main-title{
+    font-size: 5em;
+    width: 100%;
+    margin-left: -1em;
+  }
+
+  .download-wrapper .download-wrapper-button{
+    top: 90%;
+    left: 5%;
+  }
+
+  .download-wrapper .download-wrapper-button:hover{
+    left: 45%;
+  }
+
+  .main-projects>div {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .project-box {
+    max-width: 80%;
+  }
+}
