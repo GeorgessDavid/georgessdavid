@@ -71,7 +71,7 @@ header>nav>ul>li>a:hover {
   color: aliceblue
 }
 
-footer {
+/* footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +90,7 @@ footer a {
 
 footer a:hover {
   color: white;
-}
+} */
 
 .main-section {
   display: flex;
@@ -247,7 +247,6 @@ footer a:hover {
   align-items: center;
   max-width: 100%;
   border-radius: 15px;
-  ;
 }
 
 .pb-technologies img {
