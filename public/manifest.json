@@ -1,0 +1,27 @@
+{
+  "name": "Georges David - Desarrollador Web Full-Stack",
+  "short_name": "Georges David",
+  "description": "Portfolio de Georges David, desarrollador web full-stack especializado en Next.js, TypeScript y MySQL",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["portfolio", "developer", "web-development"],
+  "lang": "es",
+  "dir": "ltr"
+}
