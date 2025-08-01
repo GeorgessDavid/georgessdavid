@@ -9,8 +9,9 @@ export const Main = () => {
     const { technologies, loading } = useTechnologies();
 
     const handleDownload = () => {
+        const cvId = import.meta.env.VITE_CV_DOWNLOAD_ID;
         const link = document.createElement('a');
-        link.href = 'https://drive.google.com/uc?export=download&id=15g3-jhchC4Ny1OCjtr2NcuqkHf0u4A3l';
+        link.href = `https://drive.google.com/uc?export=download&id=${cvId}`;
         link.download = 'CV_Georges_Ammiel_David.pdf';
         document.body.appendChild(link);
         link.click();
@@ -32,22 +33,19 @@ export const Main = () => {
                 <div>
 
                     <p>
-                        Soy un desarrollador web full-stack con una fuerte habilidad en la creación de endpoints para APIs usando Node.JS. Actualmente, curso una tecnicatura en desarrollo de software, lo que refuerza mis conocimientos prácticos y teóricos.
+                        Soy desarrollador full-stack enfocado en construir soluciones web que sean escalables, seguras y fáciles de usar.
                         <br />
                         <br />
-                        He completado un curso de desarrollo web Full Stack, trabajando con el stack MERN, pero utilizando MySQL en lugar de MongoDB.
+                        Trabajo con tecnologías como <strong>Next.js</strong> y <strong>React.js</strong> en el front-end, mientras que en el back-end desarrollo APIs REST utilizando <strong>TypeScript</strong>, <strong>Express.js</strong> y bases de datos como <strong>MySQL</strong> o <strong>SQL Server</strong>.
                         <br />
                         <br />
-                        Actualmente, estoy en el equipo de desarrollo de un sistema médico online para gestionar historias clínicas e informes. Este proyecto personal no está disponible al público por razones de privacidad.
+                        Actualmente, formo parte del equipo de desarrollo de un sistema médico en línea para gestionar historias clínicas, con validaciones complejas, autenticación por roles y generación de informes automatizados.
                         <br />
                         <br />
-
-                        <br />
-                        Tengo experiencia como recepcionista en un consultorio, lo que me ha dotado de habilidades organizativas y de atención al cliente.
+                        También tengo formación académica en desarrollo de software y experiencia en el ámbito de la salud, lo que me permite comprender mejor las necesidades de los usuarios y crear soluciones efectivas.
                         <br />
                         <br />
-                        Estoy en busca de mi primera oportunidad laboral formal en IT como desarrollador. Me interesa resolver problemas y crear soluciones que mejoren la experiencia del usuario y la eficiencia operativa.
-                        <br />
+                        Me motiva crear herramientas que optimicen procesos y mejoren la experiencia de los usuarios en su día a día.
                     </p>
                     <img src="/profile.jpeg" alt="profile.jpeg" />
                 </div>
