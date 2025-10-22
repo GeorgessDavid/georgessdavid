@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --bg-color: #212529;
+  --text-red: #f83d3d;
+  --text-white: #ffffff;
+  --bg-black: #101219;
+  --bg-light: #ffffff;
+  --text-light-black: #7e7e7e;
+  --text-red-light: #b30032;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
