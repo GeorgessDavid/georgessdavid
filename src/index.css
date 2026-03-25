@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import "tailwindcss";
 
+
 :root {
-  --bg-color: #212529;
-  --text-red: #f83d3d;
-  --text-white: #ffffff;
-  --bg-black: #101219;
-  --bg-light: #ffffff;
-  --text-light-black: #7e7e7e;
-  --text-red-light: #b30032;
+  --bg-dark-color: #101219;
+  --bg-dark-color-secondary: #11131a;
+  --bg-dark-color-tertiary: #282a31;
+  --bg-dark-color-darker: #0c0e15;
+  --bg-dark-color-lighter: #191b23;
+  --text-dark-red-primary: #f83d3d;
+  --text-dark-red-secondary: #ff544f;
+  --text-dark-red-tertiary: #ca3536;
+  --text-dark-red-lighter: #E5BDB9;
+  --font-family-main: 'Ubuntu', sans-serif;
+  --font-family-secondary: 'Space Grotesk', sans-serif;
+  --font-family-tertiary: 'Inter', sans-serif;
+  --text-dark-gray-primary: #94A3B8;
 }
 
 html {

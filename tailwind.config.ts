@@ -1,0 +1,67 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "on-primary": "#680009",
+                "inverse-surface": "#e2e2ec",
+                "outline-variant": "#5c403d",
+                "primary-container": "#ff544f",
+                "on-secondary-fixed": "#1a1c1c",
+                "error": "#ffb4ab",
+                "surface-dim": "#11131a",
+                "on-secondary": "#2f3131",
+                "surface-container-highest": "#33343c",
+                "on-error": "#690005",
+                "on-tertiary-container": "#002f32",
+                "primary": "#ffb3ad",
+                "inverse-primary": "#be081b",
+                "on-tertiary-fixed": "#002022",
+                "secondary-fixed-dim": "#c6c6c7",
+                "surface-bright": "#373941",
+                "on-secondary-fixed-variant": "#454747",
+                "secondary-fixed": "#e2e2e2",
+                "surface-container-low": "#191b23",
+                "tertiary-fixed": "#87f3fd",
+                "on-primary-container": "#5c0007",
+                "surface-container-lowest": "#0c0e15",
+                "on-secondary-container": "#b4b5b5",
+                "tertiary": "#69d6e0",
+                "surface-container": "#1d1f27",
+                "surface": "#11131a",
+                "error-container": "#93000a",
+                "background": "#11131a",
+                "on-surface-variant": "#e5bdb9",
+                "on-surface": "#e2e2ec",
+                "secondary": "#c6c6c7",
+                "tertiary-fixed-dim": "#69d6e0",
+                "inverse-on-surface": "#2e3038",
+                "on-tertiary": "#00363a",
+                "on-background": "#e2e2ec",
+                "surface-tint": "#ffb3ad",
+                "primary-fixed": "#ffdad6",
+                "on-primary-fixed": "#410003",
+                "on-error-container": "#ffdad6",
+                "tertiary-container": "#229fa8",
+                "primary-fixed-dim": "#ffb3ad",
+                "on-tertiary-fixed-variant": "#004f54",
+                "secondary-container": "#454747",
+                "surface-container-high": "#282a31",
+                "on-primary-fixed-variant": "#930011",
+                "outline": "#ac8885",
+                "surface-variant": "#33343c"
+            },
+            fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"],
+                "brand": ["Ubuntu"]
+            },
+            borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+    },
+}
+
+export default config
