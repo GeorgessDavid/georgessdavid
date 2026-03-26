@@ -9,7 +9,7 @@ const Chip = ({ text, background, color, font, uppercase, className }: ChipProps
 
 export default Chip;
 
-interface ChipProps {
+export interface ChipProps {
     text: string;
     background: string;
     color: string;

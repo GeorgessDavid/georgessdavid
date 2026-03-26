@@ -1,4 +1,4 @@
-import { Chip, Button, Link } from '../components';
+import { Chip, Button, Link, Project } from '../components';
 import type { ReactNode } from 'react';
 import EastIcon from '@mui/icons-material/East';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
@@ -29,27 +29,36 @@ const Home = () => {
             </Section>
             <Section className="bg-(--bg-surface-middle) w-full py-24" id="projects">
                 <h2 className="text-(--text-secondary) font-(family-name:--font-family-spacegrotesk) uppercase font-bold">Portfolio</h2>
-                <div className="flex w-full justify-between items-center">
+                <div className="flex w-full justify-between items-center mb-12">
                     <h1 className="text-(--text-primary) font-(family-name:--font-family-spacegrotesk) font-bold text-5xl">Proyectos Destacados</h1>
                     <span className="text-(--text-secondary) font-(family-name:--font-family-ubuntu) text-xl w-1/3">Una selección de soluciones técnicas donde el código se encuentra con el diseño de alto rendimiento.</span>
                 </div>
-                <div className="flex gap-8 w-full">
-                    <div className="w-4xl relative">
-                        <div className="bg-(--bg-primary) w-full h-full absolute z-10 opacity-70 backdrop-blur-lg"></div>
-                        <div className="absolute z-20 m-8 bottom-0">
-                            <div className="flex gap-4 ">
-                                <Chip background='bg-(--text-secondary)' color='text-(--text-secondary)' font='font-(family-name:--font-family-ubuntu)' text='Next.js' uppercase={false} className='bg-(--text-secondary)/20 text-xl font-bold' />
-                                <Chip background='bg-(--text-secondary)' color='text-(--text-secondary)' font='font-(family-name:--font-family-ubuntu)' text='TypeScript' uppercase={false} className='bg-(--text-secondary)/20 text-xl font-bold' />
-                            </div>
-                            <h2 className="font-bold text-3xl font-(family-name:--font-family-ubuntu) my-4">CMD App</h2>
-                            <div className="mb-8">
-                                <span className="text-xl text-(--text-secondary)/80">Sistema de gestión de pacientes, historias clínicas y reportes clínicos online.</span>
-                            </div>
-                            <Link href="https://app.consultoriosmedicosdavid.com.ar" target="_blank" className="text-(--text-secondary) text-2xl font-bold font-(family-name:--font-family-ubuntu) hover:text-(--text-accent) transition-all duration-300">Explorar el sitio <ArrowOutwardIcon /></Link>
-                        </div>
-                        <img src='cmd_app_img.png' className="w-4xl hover:scale-105 transition-all duration-300" />
-                    </div>
+                <div className="flex gap-8 w-full justify-between">
+                    <Project
+                        size="w-5xl"
+                        img="cmd_app_img.png"
+                        img_alt="cmd_app_img.png"
+                        bgOpacity="60"
+                        title="CMD App"
+                        description="Sistema de gestión de pacientes, historias clínicas y reportes clínicos online."
+                        link={<Link href="https://app.consultoriosmedicosdavid.com.ar" target="_blank" className="text-(--text-secondary) text-2xl font-bold font-(family-name:--font-family-ubuntu) hover:text-(--text-accent) transition-all duration-300">Explorar el sitio <ArrowOutwardIcon /></Link>}
+                    >
+                        <Chip background='bg-(--text-secondary)' color='text-(--text-secondary)' font='font-(family-name:--font-family-ubuntu)' text='Next.js' uppercase={false} className='bg-(--text-secondary)/20 text-xl font-bold' />
+                        <Chip background='bg-(--text-secondary)' color='text-(--text-secondary)' font='font-(family-name:--font-family-ubuntu)' text='TypeScript' uppercase={false} className='bg-(--text-secondary)/20 text-xl font-bold' />
+                    </Project>
+                    <Project 
+                        size="w-xl"
+                        bgOpacity="30"
+                        img="fincas_aconcagua_img.png"
+                        img_alt="cmd_app_img.png"
+                        title="Fincas de Aconcagua"
+                        description="Sitio web oficial de un proyecto inmobiliario en la zona de Ing. Maschwitz."
+                        link={<Link href="https://www.fincasdeaconcagua.com.ar" target="_blank" className="text-(--text-secondary) text-2xl font-bold font-(family-name:--font-family-ubuntu) hover:text-(--text-accent) transition-all duration-300">Ir al sitio <ArrowOutwardIcon /></Link>}
+                    >
+                        <Chip background='bg-(--text-tertiary)' color='text-(--text-tertiary)' font='font-(family-name:--font-family-ubuntu)' text='React.js' uppercase={false} className='bg-(--text-tertiary)/20 text-xl font-bold' />
+                    </Project>
                 </div>
+
             </Section>
         </div>
     )
