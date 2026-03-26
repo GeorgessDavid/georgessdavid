@@ -1,6 +1,8 @@
-import { Chip, Button } from '../components';
+import { Chip, Button, Link } from '../components';
 import type { ReactNode } from 'react';
 import EastIcon from '@mui/icons-material/East';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+
 const Home = () => {
     return (
         <div className="w-full">
@@ -36,11 +38,14 @@ const Home = () => {
                         <div className="bg-(--bg-primary) w-full h-full absolute z-10 opacity-70 backdrop-blur-lg"></div>
                         <div className="absolute z-20 m-8 bottom-0">
                             <div className="flex gap-4 ">
-                                <Chip background='bg-(--text-secondary)' color='text-(--text-secondary)' font='font-(family-name:--font-family-ubuntu)' text='Next.js' uppercase={false} className='bg-(--text-secondary)/20 font-bold' />
-                                <Chip background='bg-(--text-secondary)' color='text-(--text-accent)' font='font-(family-name:--font-family-ubuntu)' text='TypeScript' uppercase={false} className='backdrop-opacity-25 font-bold' />
+                                <Chip background='bg-(--text-secondary)' color='text-(--text-secondary)' font='font-(family-name:--font-family-ubuntu)' text='Next.js' uppercase={false} className='bg-(--text-secondary)/20 text-xl font-bold' />
+                                <Chip background='bg-(--text-secondary)' color='text-(--text-secondary)' font='font-(family-name:--font-family-ubuntu)' text='TypeScript' uppercase={false} className='bg-(--text-secondary)/20 text-xl font-bold' />
                             </div>
                             <h2 className="font-bold text-3xl font-(family-name:--font-family-ubuntu) my-4">CMD App</h2>
-                            <span className="text-xl text-(--text-secondary)">Sistema de gestión de pacientes, historias clínicas y reportes clínicos online.</span>
+                            <div className="mb-8">
+                                <span className="text-xl text-(--text-secondary)/80">Sistema de gestión de pacientes, historias clínicas y reportes clínicos online.</span>
+                            </div>
+                            <Link href="https://app.consultoriosmedicosdavid.com.ar" target="_blank" className="text-(--text-secondary) text-2xl font-bold font-(family-name:--font-family-ubuntu) hover:text-(--text-accent) transition-all duration-300">Explorar el sitio <ArrowOutwardIcon /></Link>
                         </div>
                         <img src='cmd_app_img.png' className="w-4xl hover:scale-105 transition-all duration-300" />
                     </div>
