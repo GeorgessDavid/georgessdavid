@@ -104,3 +104,31 @@ body {
   background: var(--selection-bg);
   color: var(--selection-text);
 }
+
+.MuiInputBase-root {
+  background-color: var(--bg-input);
+}
+
+.MuiInputLabel-root {
+  color: var(--text-muted) !important;
+}
+
+.MuiInputBase-root:hover {
+  background-color: var(--bg-input);
+}
+
+.MuiInputBase-root:focus {
+  background-color: var(--bg-input) !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: var(--text-accent) !important;
+}
+
+.MuiInputBase-root.Mui-focused {
+  background-color: var(--bg-input) !important;
+}
+
+.MuiInputBase-input::placeholder {
+  color: var(--text-muted) !important;
+}

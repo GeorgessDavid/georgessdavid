@@ -9,7 +9,7 @@ const Header = () => {
     const { theme, setPreference } = useTheme();
 
     return (
-        <header className="w-full h-16 border-b-2 z-50 border-(--border-primary) bg-(--bg-surface-low) sticky top-0 px-8 flex items-center justify-around">
+        <header className="w-full h-16 border-b-2 z-50 border-(--border-primary) bg-(--bg-surface-low)/85 backdrop-blur-xl sticky top-0 px-8 flex items-center justify-around">
             <span className="text-(--text-primary) font-bold">DESARROLLADOR_WEB</span>
             <nav>
                 <ul className="flex space-x-4">

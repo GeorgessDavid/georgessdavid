@@ -6,6 +6,8 @@ import InsertLinkIcon from '@mui/icons-material/InsertLink';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import { TSLogo, NextJSLogo, MySQLLogo } from '../logos';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
+import { TextField } from '@mui/material';
+import { PlaceOutlined, EmailOutlined } from '@mui/icons-material';
 
 const Home = () => {
     return (
@@ -120,6 +122,50 @@ const Home = () => {
                                 <div className="text-3xl font-bold text-(--text-secondary)">TypeScript / Next.js</div>
                                 <div className="text-sm uppercase tracking widest text-(--text-secondary)">Stack principal</div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+            <Section className="px-8 md:px-24" id="contact">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                        <div>
+                            <h2 className="text-5xl font-(family-name:--font-family-spacegrotesk font-bold mb-8">Hablemos de tu próximo proyecto</h2>
+                            <p className="text-(--text-secondary) text-lg mb-12">
+                                ¿Buscas un socio tecnológico o simplemente querés saludar? Mi bandeja de entrada siempre está abierta.
+                            </p>
+                            <div className="space-y-6">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 rounded-full bg-(--bg-surface) flex items-center justify-center text-(--text-secondary)">
+                                        <EmailOutlined />
+                                    </div>
+                                    <div>
+                                        <p className="text-xs uppercase tracking-widest text-(--text-secondary)">Email</p>
+                                        <p className="font-bold">georgesdavid.dev@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 rounded-full bg-(--bg-surface) flex items-center justify-center text-(--text-secondary)">
+                                        <PlaceOutlined />
+                                    </div>
+                                    <div>
+                                        <p className="text-xs uppercase tracking-widest text-(--text-secondary)">Ubicación</p>
+                                        <p className="font-bold">Buenos Aires, Argentina</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bg-(--bg-surface-middle) p-10 rounded-2xl">
+                            <form>
+                                <div className="flex flex-col gap-8">
+                                    <TextField label="Nombre" placeholder="Tu nombre" variant="filled" fullWidth color='primary' />
+                                    <TextField label="Email" placeholder="example@example.com" type="email" variant="filled" fullWidth />
+                                    <TextField label="Mensaje" placeholder="Cuéntame sobre tu proyecto..." multiline rows={4} variant="filled" fullWidth />
+                                    <button className="w-48 bg-(--bg-accent) text-(--text-inverse) font-bold py-3 px-6 cursor-pointer rounded-lg hover:bg-(--bg-accent-soft) transition-colors">
+                                        Enviar Mensaje
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

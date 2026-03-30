@@ -6,6 +6,8 @@ import {
     useState,
     type ReactNode,
 } from 'react';
+import { ThemeProvider as MUIThemeProvider, createTheme } from '@mui/material/styles';
+
 
 type Theme = 'light' | 'dark';
 type ThemePreference = Theme | 'system';
@@ -91,7 +93,18 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
     return (
         <ThemeContext.Provider value={value}>
-            {children}
+            <MUIThemeProvider theme={createTheme({
+                palette: {
+                    primary: {
+                        main: '#b30032'
+                    }
+                },
+                typography: {
+                    fontFamily: 'var(--font-family-ubuntu)',
+                }
+            })}>
+                {children}
+            </MUIThemeProvider>
         </ThemeContext.Provider>
     );
 };
