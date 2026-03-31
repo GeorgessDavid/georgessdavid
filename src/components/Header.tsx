@@ -16,7 +16,7 @@ const Header = () => {
                     <NavLink to="/" label="Inicio" />
                     <NavLink to="/about" label="Sobre Mí" />
                     <NavLink to="/proyectos" label="Proyectos" />
-                    <NavLink to="/contacto" label="CV Virtual" />
+                    <NavLink to="/#contacto" label="Contacto" />
                     <NavLink to="/technologies" label="Tecnologías" />
                 </ul>
             </nav>

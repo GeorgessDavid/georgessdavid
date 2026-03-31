@@ -1,4 +1,3 @@
-import { Divider } from '@mui/material';
 import { Link } from '../components';
 
 const Footer = () => {

@@ -3,16 +3,19 @@
 @import "tailwindcss";
 
 
+/* ─────────────────────────────────────────────
+   LIGHT MODE  (default)
+───────────────────────────────────────────── */
 :root {
-  /* Typography */
+  /* --- Typography --- */
   --font-family-ubuntu: 'Ubuntu', sans-serif;
   --font-family-spacegrotesk: 'Space Grotesk', sans-serif;
   --font-family-inter: 'Inter', sans-serif;
 
-  /* Backgrounds */
+  /* --- Legacy background tokens (kept for components that reference them) --- */
   --bg-primary: #ffffff;
   --bg-surface-low: #f7f9fc;
-  --bg-surface-middle: #f7f9fc;
+  --bg-surface-middle: #f1f3f9;
   --bg-surface: #f1f3f9;
   --bg-surface-high: #ebeef5;
   --bg-surface-highest: #e2e6ef;
@@ -21,7 +24,7 @@
   --bg-accent-soft: rgba(179, 0, 50, 0.1);
   --bg-overlay: rgba(255, 255, 255, 0.85);
 
-  /* Text */
+  /* --- Legacy text tokens --- */
   --text-primary: #101219;
   --text-secondary: #44474e;
   --text-muted: #64748b;
@@ -29,27 +32,64 @@
   --text-accent: #b30032;
   --text-tertiary: #006874;
 
-  /* Borders */
+  /* --- Legacy border tokens --- */
   --border-primary: #c4c6cf;
   --border-secondary: #74777f;
   --border-accent: #b30032;
   --border-subtle: rgba(196, 198, 207, 0.3);
 
-  /* States */
+  /* --- States --- */
   --focus-ring: #b30032;
   --shadow-accent: rgba(179, 0, 50, 0.2);
 
-  /* Gradients */
+  /* --- Gradients --- */
   --gradient-accent-from: #b30032;
   --gradient-accent-to: #ff4d6d;
 
-  /* Selection */
+  /* --- Selection --- */
   --selection-bg: #b30032;
   --selection-text: #ffffff;
+
+  /* ── Material Design semantic tokens (light) ── */
+  --color-primary:                   #b30032;
+  --color-on-primary:                #ffffff;
+  --color-primary-container:         #b30032;
+  --color-on-primary-container:      #ffffff;
+  --color-secondary:                 #101219;
+  --color-on-secondary:              #ffffff;
+  --color-tertiary:                  #006874;
+  --color-on-tertiary:               #ffffff;
+  --color-background:                #ffffff;
+  --color-on-background:             #101219;
+  --color-surface:                   #ffffff;
+  --color-on-surface:                #101219;
+  --color-surface-variant:           #f1f1f4;
+  --color-on-surface-variant:        #44474e;
+  --color-outline:                   #74777f;
+  --color-outline-variant:           #c4c6cf;
+  --color-surface-container-lowest:  #ffffff;
+  --color-surface-container-low:     #f7f9fc;
+  --color-surface-container:         #f1f3f9;
+  --color-surface-container-high:    #ebeef5;
+  --color-surface-container-highest: #e2e6ef;
+  --color-inverse-surface:           #2e3038;
+  --color-inverse-on-surface:        #f4eff4;
+  --color-inverse-primary:           #ffb3ad;
+  --color-surface-tint:              #b30032;
+  --color-shadow:                    #000000;
+  --color-scrim:                     #000000;
+  --color-error:                     #ba1a1a;
+  --color-on-error:                  #ffffff;
+  --color-error-container:           #ffdad6;
+  --color-on-error-container:        #410002;
 }
 
+
+/* ─────────────────────────────────────────────
+   DARK MODE
+───────────────────────────────────────────── */
 [data-theme="dark"] {
-  /* Backgrounds */
+  /* --- Legacy background tokens --- */
   --bg-primary: #11131a;
   --bg-surface-low: #101219;
   --bg-surface-middle: #191b23;
@@ -61,7 +101,7 @@
   --bg-accent-soft: rgba(248, 61, 61, 0.2);
   --bg-overlay: rgba(16, 18, 25, 0.8);
 
-  /* Text */
+  /* --- Legacy text tokens --- */
   --text-primary: #e2e2ec;
   --text-secondary: #e5bdb9;
   --text-muted: #94a3b8;
@@ -69,34 +109,103 @@
   --text-accent: #f83d3d;
   --text-tertiary: #69d6e0;
 
-  /* Borders */
+  /* --- Legacy border tokens --- */
   --border-primary: #5c403d;
   --border-secondary: #ac8885;
   --border-accent: #f83d3d;
   --border-subtle: rgba(255, 255, 255, 0.05);
 
-  /* States */
+  /* --- States --- */
   --focus-ring: #f83d3d;
   --shadow-accent: rgba(248, 61, 61, 0.2);
 
-  /* Gradients */
+  /* --- Gradients --- */
   --gradient-accent-from: #f83d3d;
   --gradient-accent-to: #ff544f;
 
-  /* Selection */
+  /* --- Selection --- */
   --selection-bg: #ff544f;
   --selection-text: #5c0007;
+
+  /* ── Material Design semantic tokens (dark) ── */
+  /* NOTE: --color-primary uses the BRAND accent (#f83d3d), not the MD system token (#ffb3ad) */
+  --color-primary:                   #f83d3d;
+  --color-on-primary:                #ffffff;
+  --color-primary-container:         #ff544f;
+  --color-on-primary-container:      #5c0007;
+  --color-secondary:                 #c6c6c7;
+  --color-on-secondary:              #2f3131;
+  --color-tertiary:                  #69d6e0;
+  --color-on-tertiary:               #00363a;
+  --color-background:                #11131a;
+  --color-on-background:             #e2e2ec;
+  --color-surface:                   #11131a;
+  --color-on-surface:                #e2e2ec;
+  --color-surface-variant:           #33343c;
+  --color-on-surface-variant:        #e5bdb9;
+  --color-outline:                   #ac8885;
+  --color-outline-variant:           #5c403d;
+  --color-surface-container-lowest:  #0c0e15;
+  --color-surface-container-low:     #191b23;
+  --color-surface-container:         #1d1f27;
+  --color-surface-container-high:    #282a31;
+  --color-surface-container-highest: #33343c;
+  --color-inverse-surface:           #e2e2ec;
+  --color-inverse-on-surface:        #2e3038;
+  --color-inverse-primary:           #be081b;
+  --color-surface-tint:              #f83d3d;
+  --color-shadow:                    #000000;
+  --color-scrim:                     #000000;
+  --color-error:                     #ffb4ab;
+  --color-on-error:                  #690005;
+  --color-error-container:           #93000a;
+  --color-on-error-container:        #ffdad6;
 }
 
 
+/* ─────────────────────────────────────────────
+   TAILWIND v4 — Expose color tokens as utilities
+   so classes like bg-surface-container-high work
+───────────────────────────────────────────── */
+@theme {
+  --color-primary:                   var(--color-primary);
+  --color-on-primary:                var(--color-on-primary);
+  --color-primary-container:         var(--color-primary-container);
+  --color-on-primary-container:      var(--color-on-primary-container);
+  --color-secondary:                 var(--color-secondary);
+  --color-tertiary:                  var(--color-tertiary);
+  --color-background:                var(--color-background);
+  --color-on-background:             var(--color-on-background);
+  --color-surface:                   var(--color-surface);
+  --color-on-surface:                var(--color-on-surface);
+  --color-surface-variant:           var(--color-surface-variant);
+  --color-on-surface-variant:        var(--color-on-surface-variant);
+  --color-outline:                   var(--color-outline);
+  --color-outline-variant:           var(--color-outline-variant);
+  --color-surface-container-lowest:  var(--color-surface-container-lowest);
+  --color-surface-container-low:     var(--color-surface-container-low);
+  --color-surface-container:         var(--color-surface-container);
+  --color-surface-container-high:    var(--color-surface-container-high);
+  --color-surface-container-highest: var(--color-surface-container-highest);
+  --color-inverse-primary:           var(--color-inverse-primary);
+  --color-error:                     var(--color-error);
+  --color-on-error:                  var(--color-on-error);
+  --color-error-container:           var(--color-error-container);
+  --color-on-error-container:        var(--color-on-error-container);
+}
+
+
+/* ─────────────────────────────────────────────
+   BASE STYLES
+───────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
   font-size: 16px;
 }
 
 body {
-  background: var(--bg-primary);
-  color: var(--text-primary);
+  background: var(--color-background);
+  color: var(--color-on-surface);
   font-family: var(--font-family-inter);
 }
 
@@ -105,8 +214,12 @@ body {
   color: var(--selection-text);
 }
 
+
+/* ─────────────────────────────────────────────
+   MUI OVERRIDES (form only — do not touch structure)
+───────────────────────────────────────────── */
 .MuiInputBase-root {
-  background-color: var(--bg-input);
+  background-color: var(--bg-input) !important;
 }
 
 .MuiInputLabel-root {
@@ -114,7 +227,7 @@ body {
 }
 
 .MuiInputBase-root:hover {
-  background-color: var(--bg-input);
+  background-color: var(--bg-input) !important;
 }
 
 .MuiInputBase-root:focus {

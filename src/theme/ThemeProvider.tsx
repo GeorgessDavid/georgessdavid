@@ -95,8 +95,10 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
         <ThemeContext.Provider value={value}>
             <MUIThemeProvider theme={createTheme({
                 palette: {
+                    mode: theme,
                     primary: {
-                        main: '#b30032'
+                        main: theme === 'dark' ? '#f83d3d' : '#b30032',
+                        contrastText: '#ffffff',
                     }
                 },
                 typography: {
