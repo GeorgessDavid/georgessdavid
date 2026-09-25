@@ -1,5 +1,5 @@
 import { Header, Footer } from './components';
-import { Home } from './pages';
+import { Home, Technologies } from './pages';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './theme';
 
@@ -13,7 +13,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/proyectos" element={<div>Proyectos</div>} />
             <Route path="/cv" element={<div>CV Virtual</div>} />
-            <Route path="/technologies" element={<div>Tecnologas</div>} />
+            <Route path="/technologies" element={<Technologies />} />
           </Routes>
           <Footer />
         </Router>
